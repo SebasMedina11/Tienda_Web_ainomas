@@ -25,5 +25,5 @@ app.get('/primero', function(req, res, next){
   });
   console.log('socket', req.testing);
 });*/
- 
+
 app.listen(3000);
