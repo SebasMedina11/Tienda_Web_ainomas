@@ -27,7 +27,7 @@
 <li>app.get('/SignUp',(req,res)=>{
   res.send('Inicio sesion') Inicio de sesion;
 })</li>
-<li>app.get('/SignIn',(req,res)=>{
+<li>app.post('/SignIn',(req,res)=>{
   res.send('Registrarse') Pagina de registro;
 })</li>
 <li>app.get('/Product',(req,res)=>{
