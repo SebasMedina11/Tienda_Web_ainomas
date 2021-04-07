@@ -1,29 +1,24 @@
-var express = require('express');
-var app = express();
-//var expressWs = require('express-ws')(app);
- 
-/*app.use(function (req, res, next) {
-  console.log('middleware');
-  req.testing = 'testing';
-  return next();
-});*/
- 
-app.get('/', function(req, res, next){
-  console.log('get route', req.testing);
-  res.send('cargado')
-  res.end();
-});
-app.get('/primero', function(req, res, next){
-  console.log('get route', req.testing);
-  res.send('primer endpoint')
-  res.end();
-});
- 
-/*app.ws('/', function(ws, req) {
-  ws.on('message', function(msg) {
-    console.log(msg);
-  });
-  console.log('socket', req.testing);
-});*/
+const express = require('express')
+const app = express()
 
-app.listen(3000);
+app.get('/Inicio',(req,res)=>{
+  res.send('Inicio');
+  res.render('/scr/index.html');
+})
+
+app.get('/SignUp',(req,res)=>{
+  res.send('Inicio sesion');
+})
+
+app.get('/SignIn',(req,res)=>{
+  res.send('Registrarse');
+})
+app.post('/Cambio',(req,res)=>{
+  res.send('Cambiado')
+})
+app.delete('/Borrado',(req,res)=>{
+  res.send('Borrado');
+})
+app.listen(3000, ()=>{
+  console.log("Server in port 3000")
+})
