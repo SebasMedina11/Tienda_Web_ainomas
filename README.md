@@ -18,6 +18,26 @@
 <li>HTML</li>
 <li>CSS</li>
 </ul>
+<h3>Endpoints</h3>
+<ul>
+  <li>app.get('/Inicio',(req,res)=>{
+  res.send('Inicio');
+  
+}) Pagina de inicio</li>
+<li>app.get('/SignUp',(req,res)=>{
+  res.send('Inicio sesion') Inicio de sesion;
+})</li>
+<li>app.get('/SignIn',(req,res)=>{
+  res.send('Registrarse') Pagina de registro;
+})</li>
+<li>app.get('/Product',(req,res)=>{
+    res.send('Producto');
+  }) Vista previa del producto</li>
+
+
+
+
+</ul>
 
 </body>
 
