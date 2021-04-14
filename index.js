@@ -19,8 +19,7 @@ app.post('api/signIn',(req,res)=>{
   res.send('Registrarse');
 })
 app.get('api/item',(req,res)=>{
-      res.send('Producto');
-    })
+ })
 app.get('/api/item/:productId',(req,res)=>{
 
 })
@@ -41,11 +40,10 @@ app.delete('api/borrado',(req,res)=>{
   res.send('Borrado');
 })
 
-//mongoose.connect('mongodb://localhost:27017/shop',{useNewUrlParser: true, useUnifiedTopology: true},(err,res)=>{
-//  if(err) throw err;
-//  console.log('se conecto')
-//})
+mongoose.connect('mongodb://localhost:27017/shop',{useNewUrlParser: true, useUnifiedTopology: true},(err,res)=>{
+  if(err) throw err;
+  console.log('se conecto')
+})
 app.listen(3000, ()=>{
-  console.log("Server in port 3000")
-  
+  console.log("Server in port 3000")  
 })
